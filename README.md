@@ -1,4 +1,4 @@
-# Data Scientist
+# Biomedical Engineer | Data Scientist
 
 #### Technical Skills: Python, SQL, C++, CUDA, MATLAB
 
