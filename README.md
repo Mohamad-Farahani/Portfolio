@@ -1,11 +1,11 @@
 # Data Scientist
 
-#### Technical Skills: Python, SQL, C++, CUDA , MATLAB
+#### Technical Skills: Python, SQL, C++, CUDA, MATLAB
 
 ## Education
 - MASc., Biomedical Engineering | The University of Ottawa (_Feb 2025_)								       		
-- MASc., Physics	| The Azad University of Tehran (-Sep 2016_)	 			        		
-- BSc., Physics | The University of Texas at Dallas (_Sep 2012_)
+- MASc., Electrical Engineering	| The Azad University of Tehran (_Sep 2016_)	 			        		
+- BSc., Electrical Engineering | The University of Texas at Dallas (_Sep 2012_)
 
 ## Work Experience
 **Research Assistant @ University of Ottawa (_Jan 2021 - Jan 2025_)**
