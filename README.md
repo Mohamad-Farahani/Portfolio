@@ -8,7 +8,9 @@
 - BSc., Electrical Engineering | Azad University of Tehran (_Sep 2012_)
 
 ## Work Experience
-**Research Assistant @ University of Ottawa (_Jan 2021_ - _Jan 2025_)**
+**Data Scietist @ Braebon (_July 2025_ - _Pressent_)**
+
+**Research Assistant @ University of Ottawa (_Jan 2021_ - _June 2025_)**
 - Developed a smartphone-based framework for remote healthcare applications, utilizing advanced machine learning algorithms to enhance real-time signal processing and monitoring capabilities.
 - Engineered machine learning and deep learning models including training and implementing deep learning and optimizing algorithms to model biomedical signals, enhancing the accuracy and reliability of health monitoring systems.
 - Integrated CUDA into the framework, accelerating data and video processing tasks by leveraging GPU architecture to improve model deployment speed and resource efficiency.
