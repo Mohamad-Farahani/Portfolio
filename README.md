@@ -3,9 +3,8 @@
 #### Technical Skills: Python, SQL, C++, CUDA, MATLAB
 
 ## Education
-- MASc., Biomedical Engineering | University of Ottawa (_Feb 2025_)								       		
-- MASc., Electrical Engineering	| Azad University of Tehran (_Sep 2016_)	 			        		
-- BSc., Electrical Engineering | Azad University of Tehran (_Sep 2012_)
+- MASc., Biomedical Engineering | University of Ottawa					       		 			        		
+- BSc., Electrical Engineering | Azad University of Tehran
 
 ## Work Experience
 **Data Scietist @ Braebon (_July 2025_ - _Pressent_)**
