@@ -12,10 +12,10 @@
 
 **Research Assistant @ University of Ottawa (_Jan 2021_ - _June 2025_)**
 - Developed a smartphone-based framework for remote healthcare applications, utilizing advanced machine learning algorithms to enhance real-time signal processing and monitoring capabilities.
-- Engineered machine learning and deep learning models including training and implementing deep learning and optimizing algorithms to model biomedical signals, enhancing the accuracy and reliability of health monitoring systems.
+- Engineered machine learning and deep learning models, including training and implementing deep learning and optimizing algorithms to model biomedical signals, enhancing the accuracy and reliability of health monitoring systems.
 - Integrated CUDA into the framework, accelerating data and video processing tasks by leveraging GPU architecture to improve model deployment speed and resource efficiency.
 
-**Electrical Engineer @ Artman Smart Energy Solutions (_June 2015_ - _Nov 2020_)**
+**Electrical Engineer @ Artman Smart Energy Solutions (_June 2018_ - _Nov 2020_)**
 - Designed and developed embedded systems for smart home management, creating seamless integration between devices and user interfaces.
 - Implemented hardware and firmware solutions for the efficient operation of smart home devices, ensuring robust functionality and reliability.
 
@@ -26,4 +26,4 @@
 3. Farahani, M.H.D., Mohsen Khanmoahamdi, M. Lotfizad. Visual object tracking using sparse representation and interest points in a double-step approach. International of Journal of Computer Applications, August 2020
 4. Maryam Hayati, Farahani, M.H.D., SAR image despeckling based on sparse representation and structural features of image patches, 1st scientific research conference on Mechanics, Electrical, Computer Engineering, Baku. 2020
 5. Farahani, M.H.D. and M. Lotfizad. Visual tracking via decision-based particle filtering based on sparse representation. 2018. SPIE
-6.  Mohamad Hosein Davoodabadi Farahani, Mojtaba lotfizad, Visual target tracking using target's memory template and corner points. 2016. 4th International Conference on Applied Research in Computer Engineering and Signal Processing.
+6.  Mohamad Hosein Davoodabadi Farahani, Mojtaba Lotfizad, Visual target tracking using target's memory template and corner points. 2016. 4th International Conference on Applied Research in Computer Engineering and Signal Processing.
