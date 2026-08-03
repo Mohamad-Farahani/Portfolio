@@ -4,38 +4,41 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Mohamad Farahani — AI/ML Developer, Data Scientist, and Biomedical Engineer." />
-  <meta name="theme-color" content="#14161a" />
+  <meta name="theme-color" content="#0d0d0d" />
   <title>Mohamad Farahani | AI/ML Developer & Data Scientist</title>
   <style>
     :root {
-      /* Changed to a stylish greyish-black theme */
-      --bg: #121418;
-      --bg-2: #1e2229;
-      --panel: rgba(26, 30, 36, 0.72);
-      --panel-strong: rgba(30, 35, 43, 0.92);
-      --text: #eaf4ff;
-      --muted: #9db3c9;
-      --line: rgba(142, 191, 255, 0.15);
-      --cyan: #5ee7f2;
-      --blue: #70a5ff;
-      --violet: #b08cff;
-      --green: #74f6ae;
-      --radius: 24px;
+      /* Strictly Grayish-Black Palette */
+      --bg: #0a0a0a;
+      --bg-2: #1a1b1e;
+      --bg-3: #25262b;
+      --panel: rgba(26, 27, 30, 0.75);
+      --panel-strong: rgba(37, 38, 43, 0.95);
+      --text: #f1f3f5;
+      --muted: #909296;
+      --line: rgba(255, 255, 255, 0.08);
+      
+      /* Vibrant Accents for Contrast */
+      --cyan: #3bc9db;
+      --blue: #4dabf7;
+      --violet: #9775fa;
+      --green: #40c057;
+      --radius: 20px;
       --max: 1200px;
     }
 
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
+    
     body {
       margin: 0;
       color: var(--text);
       line-height: 1.75;
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
-      background:
-        radial-gradient(circle at 12% 10%, rgba(94, 231, 242, 0.12), transparent 24%),
-        radial-gradient(circle at 88% 18%, rgba(176, 140, 255, 0.12), transparent 24%),
-        radial-gradient(circle at 70% 75%, rgba(116, 246, 174, 0.08), transparent 30%),
-        linear-gradient(135deg, var(--bg), var(--bg-2) 48%, var(--bg));
+      /* Animated Grayish-Black Background */
+      background: linear-gradient(120deg, var(--bg), var(--bg-2), var(--bg-3), var(--bg));
+      background-size: 300% 300%;
+      animation: gradientPan 20s ease-in-out infinite;
       overflow-x: hidden;
     }
 
@@ -44,12 +47,48 @@
       position: fixed;
       inset: 0;
       pointer-events: none;
-      background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-      background-size: 44px 44px;
-      opacity: .5;
-      mask-image: linear-gradient(180deg, rgba(0,0,0,1), transparent 85%);
-      -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,1), transparent 85%);
+      background-image: 
+        linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px), 
+        linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+      background-size: 40px 40px;
+      mask-image: radial-gradient(circle at center, black, transparent 80%);
+      -webkit-mask-image: radial-gradient(circle at center, black, transparent 80%);
+      z-index: 0;
     }
+
+    /* --- Keyframe Animations --- */
+    @keyframes gradientPan {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0px); }
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% { box-shadow: 0 0 15px rgba(59, 201, 219, 0.2); }
+      50% { box-shadow: 0 0 30px rgba(59, 201, 219, 0.5); }
+    }
+
+    @keyframes pulseOrb {
+      0%, 100% { transform: scale(1); opacity: 0.15; }
+      50% { transform: scale(1.2); opacity: 0.25; }
+    }
+
+    /* Applied Animation Classes */
+    .stagger-1 { animation: fadeInUp 0.8s ease-out 0.1s forwards; opacity: 0; }
+    .stagger-2 { animation: fadeInUp 0.8s ease-out 0.3s forwards; opacity: 0; }
+    .stagger-3 { animation: fadeInUp 0.8s ease-out 0.5s forwards; opacity: 0; }
+    .stagger-4 { animation: fadeInUp 0.8s ease-out 0.7s forwards; opacity: 0; }
 
     a { color: inherit; }
     .container {
@@ -57,17 +96,6 @@
       margin: auto;
       position: relative;
       z-index: 1;
-    }
-
-    /* Scroll Reveal Animation Classes */
-    .reveal {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    }
-    .reveal.active {
-      opacity: 1;
-      transform: translateY(0);
     }
 
     nav {
@@ -82,10 +110,10 @@
       align-items: center;
       border: 1px solid var(--line);
       border-radius: 999px;
-      background: rgba(18, 20, 24, 0.8);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
-      box-shadow: 0 10px 40px rgba(0,0,0,.4);
+      background: rgba(10, 10, 10, 0.6);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: 0 10px 30px rgba(0,0,0,.5);
     }
 
     .brand { text-decoration: none; font-weight: 800; letter-spacing: -.02em; }
@@ -96,9 +124,9 @@
       text-decoration: none;
       color: var(--muted);
       font-size: .92rem;
-      transition: color .2s ease;
+      transition: color .3s ease, transform .3s ease;
     }
-    .nav-links a:hover { color: var(--text); }
+    .nav-links a:hover { color: var(--text); transform: translateY(-2px); }
 
     .hero {
       min-height: 92vh;
@@ -112,32 +140,31 @@
 
     .orb {
       position: absolute;
-      border-radius: 999px;
-      filter: blur(24px);
-      opacity: .25;
+      border-radius: 50%;
+      filter: blur(40px);
       pointer-events: none;
-      animation: drift 10s ease-in-out infinite alternate;
+      animation: pulseOrb 8s infinite ease-in-out;
     }
-    .orb.one { width: 180px; height: 180px; background: var(--cyan); left: -40px; top: 120px; }
-    .orb.two { width: 220px; height: 220px; background: var(--violet); right: -30px; top: 80px; }
+    .orb.one { width: 250px; height: 250px; background: var(--cyan); left: -50px; top: 100px; }
+    .orb.two { width: 300px; height: 300px; background: var(--violet); right: -50px; top: 50px; animation-delay: -4s; }
 
     .eyebrow {
       display: inline-flex;
       gap: 9px;
       align-items: center;
       padding: 8px 12px;
-      border: 1px solid rgba(116,246,174,.3);
+      border: 1px solid rgba(64, 192, 87, 0.3);
       border-radius: 999px;
       color: var(--green);
-      background: rgba(116,246,174,.12);
+      background: rgba(64, 192, 87, 0.1);
       font: 700 .8rem Consolas, monospace;
       letter-spacing: .06em;
       text-transform: uppercase;
     }
     .pulse {
       width: 8px; height: 8px; border-radius: 50%; background: var(--green);
-      box-shadow: 0 0 0 5px rgba(116,246,174,.14);
-      animation: pulse 1.8s ease-in-out infinite;
+      box-shadow: 0 0 0 4px rgba(64, 192, 87, 0.2);
+      animation: pulseOrb 2s ease-in-out infinite;
     }
 
     h1 {
@@ -151,7 +178,10 @@
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
+      display: inline-block;
+      animation: float 6s ease-in-out infinite;
     }
+    
     .hero-copy {
       max-width: 690px;
       color: var(--muted);
@@ -166,129 +196,117 @@
       align-items: center;
       justify-content: center;
       min-height: 46px;
-      padding: 0 18px;
+      padding: 0 20px;
       border: 1px solid var(--line);
       border-radius: 12px;
       text-decoration: none;
       font-weight: 750;
-      background: rgba(255,255,255,.04);
-      transition: transform .25s ease, border-color .25s ease, background .25s ease, box-shadow .25s ease;
+      background: rgba(255,255,255,.03);
+      transition: all .3s ease;
     }
     .button:hover { 
-      transform: translateY(-2px); 
-      border-color: rgba(94,231,242,.45); 
+      transform: translateY(-4px); 
+      border-color: var(--cyan); 
       background: rgba(255,255,255,.08); 
-      box-shadow: 0 8px 24px rgba(94,231,242, 0.15);
+      box-shadow: 0 10px 20px rgba(59, 201, 219, 0.15);
     }
     .primary {
-      color: #03111b;
+      color: #000;
       border: 0;
       background: linear-gradient(120deg, var(--cyan), var(--blue));
-      box-shadow: 0 10px 30px rgba(94,231,242,.16);
+      animation: pulseGlow 3s infinite;
+    }
+    .primary:hover {
+      animation: none;
+      box-shadow: 0 15px 30px rgba(59, 201, 219, 0.4);
     }
 
     .terminal, .card {
       border: 1px solid var(--line);
       border-radius: var(--radius);
       background: var(--panel);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      box-shadow: 0 20px 60px rgba(0,0,0,.4);
-      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      box-shadow: 0 25px 50px rgba(0,0,0,.6);
+      transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
     }
 
     .terminal {
       position: relative;
       overflow: hidden;
       min-height: 460px;
+      animation: float 8s ease-in-out infinite;
     }
     .terminal:hover {
-      box-shadow: 0 25px 70px rgba(0,0,0,.5);
-    }
-    .terminal::after {
-      content: "";
-      position: absolute;
-      inset: auto -20px -20px auto;
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(94,231,242,.15), transparent 70%);
-      pointer-events: none;
+      transform: translateY(-10px) scale(1.02);
+      border-color: rgba(59, 201, 219, 0.3);
+      box-shadow: 0 30px 60px rgba(0,0,0,.8), 0 0 40px rgba(59, 201, 219, 0.1);
     }
     .terminal-bar {
       display: flex;
       gap: 7px;
       padding: 13px 16px;
       border-bottom: 1px solid var(--line);
-      background: rgba(255,255,255,.02);
+      background: rgba(0,0,0,.2);
     }
-    .dot { width: 10px; height: 10px; border-radius: 50%; background: #ff7087; }
-    .dot:nth-child(2) { background: #ffd166; }
-    .dot:nth-child(3) { background: #74f6ae; }
+    .dot { width: 12px; height: 12px; border-radius: 50%; background: #ff5f56; }
+    .dot:nth-child(2) { background: #ffbd2e; }
+    .dot:nth-child(3) { background: #27c93f; }
+    
     .terminal-body {
       padding: 24px;
-      color: #c7d8ee;
-      font: .9rem/1.7 Consolas, monospace;
+      color: #d1d5db;
+      font: .95rem/1.7 Consolas, monospace;
       overflow: auto;
     }
     .terminal-body p { margin: 0 0 8px; white-space: nowrap; }
     .prompt { color: var(--green); }
     .key { color: var(--cyan); }
-    .value { color: #f2c3ff; }
-    .comment { color: #7187a3; }
+    .value { color: #ce93d8; }
+    .comment { color: #6b7280; }
     
     .typing-effect {
       display: inline-block;
       overflow: hidden;
       white-space: nowrap;
       border-right: 2px solid var(--green);
-      animation: typing 2s steps(30, end), blink-caret 0.75s step-end infinite;
+      animation: typing 2.5s steps(30, end) forwards, blink-caret 0.75s step-end infinite;
+      width: 0;
     }
-
-    .logo-mark {
-      width: 20px;
-      height: 20px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      border-radius: 50%;
-      padding: 2px;
-      background: rgba(94,231,242,.12);
-      color: var(--cyan);
-    }
-    .logo-mark svg { width: 100%; height: 100%; display: block; }
+    @keyframes typing { from { width: 0; } to { width: 150px; } }
+    @keyframes blink-caret { from, to { border-color: transparent; } 50% { border-color: var(--green); } }
 
     .stats {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
-      margin-top: -12px;
-      margin-bottom: 20px;
+      gap: 16px;
+      margin-top: -20px;
+      margin-bottom: 40px;
     }
     .stat {
-      padding: 20px 22px;
+      padding: 24px;
       border: 1px solid var(--line);
-      border-radius: 18px;
+      border-radius: var(--radius);
       background: var(--panel);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      transition: transform 0.3s ease, border-color 0.3s ease;
+      text-align: center;
+      transition: all 0.3s ease;
     }
     .stat:hover {
-      transform: translateY(-5px);
-      border-color: rgba(94, 231, 242, 0.4);
+      transform: translateY(-8px);
+      border-color: var(--cyan);
+      background: var(--panel-strong);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
     }
-    .stat strong { display: block; color: var(--cyan); font-size: 1.65rem; margin-bottom: 2px; }
+    .stat strong { display: block; color: var(--cyan); font-size: 1.8rem; margin-bottom: 4px; font-weight: 800; }
     .stat span { color: var(--muted); font-size: .9rem; }
 
-    section { padding: 72px 0; }
+    section { padding: 80px 0; }
     .section-head {
       display: flex;
       justify-content: space-between;
       align-items: end;
       gap: 24px;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
     }
     .kicker {
       margin: 0 0 8px;
@@ -299,181 +317,129 @@
     }
     h2 {
       margin: 0;
-      font-size: clamp(1.95rem, 4.8vw, 3rem);
-      line-height: 1.06;
+      font-size: clamp(2rem, 4.8vw, 3.2rem);
+      line-height: 1.1;
       letter-spacing: -.04em;
     }
     .note { max-width: 470px; margin: 0; color: var(--muted); }
 
-    .about-grid {
-      display: grid;
-      grid-template-columns: .82fr 1.18fr;
-      gap: 22px;
-    }
-    .profile, .story, .info, .project, .experience, .paper, .contact, .stack-card {
-      padding: 27px;
-    }
-    .profile h3, .project h3, .experience h3 { margin: 16px 0 4px; }
-    .profile p, .story p, .project p, .company, .info li, .experience li, .paper { color: var(--muted); }
-
+    .about-grid { display: grid; grid-template-columns: .82fr 1.18fr; gap: 24px; }
+    .card { padding: 32px; }
+    .profile { text-align: center; }
     .avatar {
-      width: 122px;
-      height: 122px;
+      width: 140px;
+      height: 140px;
       object-fit: cover;
-      border-radius: 26px;
-      border: 2px solid rgba(94,231,242,.32);
-      box-shadow: 0 10px 26px rgba(0,0,0,.4);
-      transition: transform 0.4s ease;
+      border-radius: 30px;
+      border: 2px solid rgba(59, 201, 219, 0.4);
+      margin: 0 auto 20px;
+      box-shadow: 0 15px 35px rgba(0,0,0,.5);
+      transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
-    .avatar:hover {
-      transform: scale(1.05) rotate(2deg);
-    }
+    .profile:hover .avatar { transform: scale(1.1) rotate(5deg); border-color: var(--cyan); }
+    .profile h3, .project h3, .experience h3 { margin: 0 0 8px; color: var(--text); }
+    .profile p, .story p, .project p, .company, .info li, .experience li, .paper { color: var(--muted); }
+    .story p { margin-bottom: 16px; }
 
-    .chips { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 20px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
     .chip {
-      padding: 8px 11px;
+      padding: 8px 14px;
       border: 1px solid var(--line);
       border-radius: 999px;
-      background: rgba(255,255,255,.04);
-      color: #c7d8ee;
-      font: 650 .82rem Consolas, monospace;
-      letter-spacing: .02em;
-      transition: all .25s ease;
+      background: rgba(255,255,255,.02);
+      color: #e5e7eb;
+      font: 600 .85rem Consolas, monospace;
+      transition: all .3s ease;
     }
     .chip:hover {
-      background: rgba(94,231,242,.15);
+      background: rgba(59, 201, 219, 0.1);
       border-color: var(--cyan);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(94,231,242, 0.2);
+      color: var(--cyan);
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 5px 15px rgba(59, 201, 219, 0.2);
     }
 
-    .stack-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
-    }
-    .stack-card {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      min-height: 200px;
-      justify-content: space-between;
-    }
-    .stack-card:hover { 
-      transform: translateY(-6px); 
-      border-color: rgba(94,231,242,.4); 
-      box-shadow: 0 15px 40px rgba(0,0,0,0.5), 0 0 15px rgba(94,231,242, 0.1);
-    }
-    .stack-card h3 { margin: 0; font-size: 1.06rem; }
-    .stack-card p { margin: 0; color: var(--muted); }
+    .stack-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+    .stack-card { display: flex; flex-direction: column; gap: 16px; min-height: 220px; justify-content: space-between; }
+    .stack-card:hover { transform: translateY(-8px); border-color: rgba(59, 201, 219, 0.5); box-shadow: 0 20px 40px rgba(0,0,0,.6); }
     .icon-row { display: flex; gap: 8px; flex-wrap: wrap; }
-    
     .mini-chip {
-      padding: 7px 10px;
+      padding: 6px 12px;
       border-radius: 999px;
-      background: rgba(255,255,255,.04);
-      color: #dceaff;
-      font: 700 .74rem Consolas, monospace;
-      border: 1px solid rgba(255,255,255,.08);
-      transition: all .25s ease;
+      background: rgba(255,255,255,.03);
+      font: 700 .75rem Consolas, monospace;
+      border: 1px solid rgba(255,255,255,.05);
+      transition: all .3s ease;
     }
-    .mini-chip:hover {
-      background: rgba(94,231,242,.15);
-      border-color: var(--cyan);
-      transform: translateY(-2px);
-    }
+    .stack-card:hover .mini-chip { border-color: var(--line); background: rgba(255,255,255,.06); }
 
-    .experience-list { display: grid; gap: 16px; }
-    .experience {
-      display: grid;
-      grid-template-columns: 200px 1fr;
-      gap: 28px;
-    }
-    .experience:hover { 
-      transform: translateY(-3px); 
-      border-color: rgba(94,231,242,.35); 
-      box-shadow: 0 12px 30px rgba(0,0,0,0.4);
-    }
-    .when { color: var(--cyan); font: 700 .82rem Consolas, monospace; }
-    .experience ul { margin: 0; padding-left: 20px; }
-    .experience li + li { margin-top: 7px; }
-    .metric { 
-      color: var(--green); 
-      font-weight: 800; 
-      text-shadow: 0 0 8px rgba(116,246,174,.3); 
-    }
+    .experience-list { display: grid; gap: 20px; }
+    .experience { display: grid; grid-template-columns: 200px 1fr; gap: 32px; align-items: start; }
+    .experience:hover { transform: translateX(10px); border-color: rgba(59, 201, 219, 0.4); background: var(--panel-strong); }
+    .when { color: var(--cyan); font: 700 .85rem Consolas, monospace; padding-top: 4px; }
+    .experience ul { margin: 12px 0 0; padding-left: 20px; }
+    .experience li { margin-bottom: 8px; }
+    .metric { color: var(--green); font-weight: 800; }
 
-    .projects { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
-    .project:hover { 
-      transform: translateY(-6px); 
-      border-color: rgba(94,231,242,.35); 
-      box-shadow: 0 15px 35px rgba(0,0,0,0.5);
-    }
+    .projects { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .project { display: flex; flex-direction: column; }
+    .project:hover { transform: translateY(-8px); border-color: var(--cyan); box-shadow: 0 20px 40px rgba(0,0,0,0.6); }
     .project-icon { 
-      display: inline-flex; 
-      align-items: center; 
-      justify-content: center; 
-      width: 40px; 
-      height: 40px; 
-      border-radius: 10px; 
-      background: rgba(94,231,242,.1); 
-      color: var(--cyan); 
-      margin-bottom: 8px; 
+      display: inline-flex; align-items: center; justify-content: center; 
+      width: 48px; height: 48px; border-radius: 12px; 
+      background: rgba(59, 201, 219, 0.1); color: var(--cyan); 
+      margin-bottom: 16px; transition: transform 0.3s ease;
     }
-    .joke { font-style: italic; font-size: .92rem; }
+    .project:hover .project-icon { transform: rotate(10deg) scale(1.1); background: var(--cyan); color: #000; }
+    .joke { font-style: italic; font-size: .92rem; margin-top: auto; padding-top: 16px; }
 
-    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-    .info h3 { margin-top: 0; }
-
-    .publications { display: grid; gap: 12px; counter-reset: paper; }
-    .paper { position: relative; padding-left: 62px; }
-    .paper:hover { border-color: rgba(176,140,255,.4); }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .info ul { padding-left: 20px; line-height: 1.8; }
+    
+    .publications { display: grid; gap: 16px; counter-reset: paper; }
+    .paper { position: relative; padding: 24px 24px 24px 64px; }
+    .paper:hover { transform: translateX(10px); border-color: var(--violet); background: var(--panel-strong); }
     .paper::before {
       counter-increment: paper;
       content: counter(paper, decimal-leading-zero);
       position: absolute;
-      left: 21px;
+      left: 24px; top: 24px;
       color: var(--violet);
-      font: 800 .8rem Consolas, monospace;
+      font: 800 .85rem Consolas, monospace;
     }
-    .paper strong { color: var(--text); }
+    .paper strong { color: var(--text); display: block; margin-bottom: 4px; }
 
     .contact {
       text-align: center;
-      background: linear-gradient(135deg, rgba(94,231,242,.08), rgba(176,140,255,.08)), var(--panel);
+      background: linear-gradient(135deg, rgba(26,27,30,0.9), rgba(37,38,43,0.9));
+      border-color: rgba(255,255,255,0.1);
+      padding: 60px 32px;
     }
-    .contact p { max-width: 690px; margin: 12px auto; color: var(--muted); }
+    .contact:hover { border-color: var(--cyan); box-shadow: 0 0 50px rgba(59, 201, 219, 0.1); }
+    .contact p { max-width: 690px; margin: 16px auto 32px; color: var(--muted); font-size: 1.1rem; }
     .contact .actions { justify-content: center; }
 
-    footer {
-      text-align: center;
-      padding: 32px 0 50px;
-      color: #7187a3;
-      font: .85rem Consolas, monospace;
-    }
+    footer { text-align: center; padding: 40px 0 60px; color: #5c5f66; font: .85rem Consolas, monospace; }
 
-    @keyframes pulse { 0%,100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.38); opacity: .7; } }
-    @keyframes drift { 0% { transform: translate3d(0,0,0) scale(1); } 100% { transform: translate3d(16px,-18px,0) scale(1.03); } }
-    @keyframes typing { from { width: 0; } to { width: 140px; } }
-    @keyframes blink-caret { from, to { border-color: transparent; } 50% { border-color: var(--green); } }
+    /* Scroll Animation Utility */
+    .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+    .reveal.active { opacity: 1; transform: translateY(0); }
 
     @media (max-width: 960px) {
-      .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 60px; }
-      .stack-grid { grid-template-columns: 1fr; }
+      .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 60px; text-align: center; }
+      .hero-copy { margin: 0 auto; }
+      .actions { justify-content: center; }
+      .stack-grid, .projects, .two-col, .about-grid { grid-template-columns: 1fr; }
       .stats { grid-template-columns: repeat(2, 1fr); }
-      .about-grid, .two-col, .projects { grid-template-columns: 1fr; }
-      .experience { grid-template-columns: 1fr; gap: 10px; }
-      .section-head { align-items: start; flex-direction: column; }
+      .experience { grid-template-columns: 1fr; gap: 12px; }
+      .section-head { align-items: flex-start; flex-direction: column; }
     }
-
-    @media (max-width: 860px) {
-      .nav-links a:not(:last-child) { display: none; }
-      .stats { grid-template-columns: 1fr 1fr; }
-    }
+    @media (max-width: 600px) { .nav-links a:not(:last-child) { display: none; } .stats { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
-<nav>
+
+<nav class="stagger-1">
   <a class="brand" href="#top">mohamad<span>.ai</span></a>
   <div class="nav-links">
     <a href="#about">About</a>
@@ -484,10 +450,11 @@
 </nav>
 
 <main id="top">
-  <header class="container hero reveal">
+  <header class="container hero">
     <div class="orb one"></div>
     <div class="orb two"></div>
-    <div>
+    
+    <div class="stagger-2">
       <span class="eyebrow"><span class="pulse"></span> Available for AI / ML opportunities</span>
       <h1>Mohamad<br><span class="gradient">Farahani.</span></h1>
       <p class="hero-copy">
@@ -501,7 +468,7 @@
       </div>
     </div>
     
-    <div class="terminal">
+    <div class="terminal stagger-3">
       <div class="terminal-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
       <div class="terminal-body">
         <p><span class="prompt">$</span> <span class="typing-effect">python profile.py</span></p>
@@ -518,11 +485,11 @@
     </div>
   </header>
 
-  <div class="container stats reveal">
-    <div class="stat"><strong>5+ yrs</strong><span>Applied AI, ML, Data Science and research</span></div>
-    <div class="stat"><strong>35%</strong><span>Faster GPU compute with CUDA</span></div>
-    <div class="stat"><strong>20%</strong><span>Performance gains in biomedical models</span></div>
-    <div class="stat"><strong>6</strong><span>Peer-reviewed publications</span></div>
+  <div class="container stats stagger-4">
+    <div class="stat"><strong>5+ yrs</strong><span>Applied AI & ML</span></div>
+    <div class="stat"><strong>35%</strong><span>Faster GPU compute</span></div>
+    <div class="stat"><strong>20%</strong><span>Performance gains</span></div>
+    <div class="stat"><strong>6</strong><span>Publications</span></div>
   </div>
 
   <section id="about">
@@ -554,12 +521,9 @@
             <span class="chip">PyTorch</span>
             <span class="chip">TensorFlow</span>
             <span class="chip">LangChain</span>
-            <span class="chip">LangGraph</span>
-            <span class="chip">RAG</span>
             <span class="chip">Azure OpenAI</span>
             <span class="chip">Databricks</span>
             <span class="chip">CUDA</span>
-            <span class="chip">FastAPI</span>
           </div>
         </article>
       </div>
@@ -571,18 +535,13 @@
       <div class="section-head">
         <div>
           <p class="kicker">02 / Core stack</p>
-          <h2>Built for modern AI workflows.</h2>
+          <h2>Built for modern workflows.</h2>
         </div>
-        <p class="note">From local inference to cloud-native assistants, I work across the full stack of LLM applications and applied ML systems.</p>
       </div>
       <div class="stack-grid">
         <article class="card stack-card">
           <div>
-            <h3>LLM Systems <span style="display:inline-block;margin-left:8px;vertical-align:middle;">
-              <span class="logo-mark" style="width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;">
-                <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.4"/><rect x="9" y="9" width="6" height="6" fill="currentColor" rx="1"/></svg>
-              </span>
-            </span></h3>
+            <h3>LLM Systems</h3>
             <p>Deploying retrieval-augmented agents, prompt pipelines, tool orchestration, and fail-safe API fallback for production assistants.</p>
           </div>
           <div class="icon-row">
@@ -624,7 +583,6 @@
           <p class="kicker">03 / Experience</p>
           <h2>What I’ve been building.</h2>
         </div>
-        <p class="note">From clinical research pipelines to production-focused LLM applications.</p>
       </div>
       <div class="experience-list">
         <article class="card experience">
@@ -635,7 +593,7 @@
             <ul>
               <li>Delivered production AI solutions for finance, healthcare, and hiring workflows, including a voice agent and finance assistant.</li>
               <li>Built modular orchestration for ingestion, retrieval, tool routing, fallback APIs, observability, and automated model tests.</li>
-              <li>Reduced inference cost by 18% through local quantized Qwen CPU models while preserving answer quality across cloud and local deployments.</li>
+              <li>Reduced inference cost by 18% through local quantized CPU models.</li>
             </ul>
           </div>
         </article>
@@ -646,9 +604,8 @@
             <h3>Data Scientist</h3>
             <p class="company">BRAEBON Medical Corporation</p>
             <ul>
-              <li>Built a clinical signal pipeline that reduced manual review by <span class="metric">15%</span> and improved model estimation accuracy by <span class="metric">20%</span>.</li>
-              <li>Delivered Streamlit dashboards, model benchmarking, validation workflows, and deployment-ready data packaging.</li>
-              <li>Implemented end-to-end logging and monitoring for medical device research and FDA-style review readiness.</li>
+              <li>Built a clinical signal pipeline reducing manual review by <span class="metric">15%</span> and improving accuracy by <span class="metric">20%</span>.</li>
+              <li>Delivered Streamlit dashboards and implemented end-to-end logging for FDA-style readiness.</li>
             </ul>
           </div>
         </article>
@@ -659,21 +616,8 @@
             <h3>AI/ML Research Assistant</h3>
             <p class="company">University of Ottawa</p>
             <ul>
-              <li>Developed smartphone-video pipelines for cardiovascular and respiratory monitoring with clinical collaborators.</li>
+              <li>Developed smartphone-video pipelines for cardiovascular and respiratory monitoring.</li>
               <li>Improved model accuracy by <span class="metric">20%</span> and reduced CUDA inference latency by <span class="metric">35%</span>.</li>
-              <li>Delivered reproducible research code, data collection automation, and validation workflows for clinical studies.</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="card experience">
-          <div class="when">JUN 2018 — NOV 2020</div>
-          <div>
-            <h3>Data Analyst</h3>
-            <p class="company">Artman Smart Energy Solutions</p>
-            <ul>
-              <li>Built demand forecasting models that contributed to a <span class="metric">15%</span> reduction in energy use.</li>
-              <li>Delivered dashboards, reporting automation, and embedded analytics for smart-home energy systems.</li>
             </ul>
           </div>
         </article>
@@ -685,19 +629,19 @@
     <div class="container reveal">
       <div class="section-head">
         <div>
-          <p class="kicker">04 / Selected projects</p>
-          <h2>Useful AI,<br>not demo-ware.</h2>
+          <p class="kicker">04 / Projects</p>
+          <h2>Useful AI, not demo-ware.</h2>
         </div>
-        <p class="note">Generative AI, voice systems, cloud pipelines, and applied biomedical ML.</p>
       </div>
       <div class="projects">
+        
         <article class="card project">
           <div class="project-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
           </div>
           <h3>AI Interview Coach</h3>
           <p>End-to-end coaching system utilizing local Qwen models and OpenAI.</p>
-          <div class="chips"><span class="chip">Qwen</span><span class="chip">OpenAI</span><span class="chip">LangChain</span><span class="chip">Pytest</span></div>
+          <div class="chips"><span class="chip">Qwen</span><span class="chip">OpenAI</span><span class="chip">LangChain</span></div>
         </article>
 
         <article class="card project">
@@ -705,9 +649,9 @@
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
           </div>
           <h3>AI Research Assistant</h3>
-          <p>RAG assistant that retrieves evidence, synthesizes findings, and cites source documents for research review.</p>
+          <p>RAG assistant that retrieves evidence, synthesizes findings, and cites source documents.</p>
           <p class="joke">For those “I definitely read that somewhere” moments.</p>
-          <div class="chips"><span class="chip">LangChain</span><span class="chip">Hugging Face</span><span class="chip">FAISS</span><span class="chip">Chroma</span></div>
+          <div class="chips"><span class="chip">LangChain</span><span class="chip">FAISS</span><span class="chip">Chroma</span></div>
         </article>
 
         <article class="card project">
@@ -715,9 +659,9 @@
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
           </div>
           <h3>Voice Agentic Assistant</h3>
-          <p>Voice agent with speech recognition, tool orchestration, calendar integration, and session-aware dialogue state.</p>
-          <p class="joke">It hears the user, calls the right backend tools, and avoids repeated prompts.</p>
-          <div class="chips"><span class="chip">Whisper</span><span class="chip">LangGraph</span><span class="chip">Twilio</span><span class="chip">FastAPI</span></div>
+          <p>Voice agent with speech recognition, tool orchestration, and calendar integration.</p>
+          <p class="joke">Hears the user, calls backend tools, and avoids repeated prompts.</p>
+          <div class="chips"><span class="chip">Whisper</span><span class="chip">LangGraph</span><span class="chip">FastAPI</span></div>
         </article>
 
         <article class="card project">
@@ -725,30 +669,11 @@
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
           </div>
           <h3>Finance AI Assistant</h3>
-          <p>Hybrid retrieval assistant for financial documents with source-cited answers and multi-document synthesis.</p>
-          <p class="joke">Keeping finance teams from chasing the wrong page in quarterly reports.</p>
-          <div class="chips"><span class="chip">Azure OpenAI</span><span class="chip">AI Search</span><span class="chip">LangSmith</span><span class="chip">Databricks</span></div>
+          <p>Hybrid retrieval assistant for financial documents with source-cited answers.</p>
+          <p class="joke">Keeping teams from chasing the wrong page in quarterly reports.</p>
+          <div class="chips"><span class="chip">Azure OpenAI</span><span class="chip">Databricks</span></div>
         </article>
 
-        <article class="card project">
-          <div class="project-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
-          </div>
-          <h3>Weather Data Pipeline</h3>
-          <p>Bronze/Silver/Gold ETL pipeline that normalizes weather feeds, validates schema, and feeds analytics-ready BigQuery tables.</p>
-          <p class="joke">Because even weather data deserves medallion architecture.</p>
-          <div class="chips"><span class="chip">GCP</span><span class="chip">BigQuery</span><span class="chip">ETL</span></div>
-        </article>
-
-        <article class="card project">
-          <div class="project-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </div>
-          <h3>Contactless Health Monitoring</h3>
-          <p>Smartphone-video pipeline for heart rate, respiratory rate, and jugular venous pressure estimation with clinical-grade validation.</p>
-          <p class="joke">Computer vision with a clinical lens.</p>
-          <div class="chips"><span class="chip">OpenCV</span><span class="chip">YOLOv8</span><span class="chip">CUDA</span></div>
-        </article>
       </div>
     </div>
   </section>
@@ -758,7 +683,7 @@
       <div class="section-head">
         <div>
           <p class="kicker">05 / Credentials</p>
-          <h2>Education & certifications.</h2>
+          <h2>Education & Certifications.</h2>
         </div>
       </div>
       <div class="two-col">
@@ -777,7 +702,6 @@
             <li>DeepLearning.AI ML and deep-learning coursework</li>
             <li>Duke University Python Essentials for MLOps</li>
           </ul>
-          <p style="margin-top:18px; color:var(--muted);">These certifications support the production Azure and Databricks deployments shown in this portfolio.</p>
         </article>
       </div>
     </div>
@@ -790,15 +714,12 @@
           <p class="kicker">06 / Publications</p>
           <h2>Peer-reviewed work.</h2>
         </div>
-        <p class="note">Research in contactless health monitoring, image processing, and visual tracking.</p>
       </div>
       <div class="publications">
         <article class="card paper"><strong>Non-contact imaging of the neck for monitoring cardiopulmonary clinic patients.</strong> Biomedical Optics Express, 2025.</article>
         <article class="card paper"><strong>Non-contact heart rate and respiratory rate estimation from videos of the neck.</strong> IEEE EMBC, 2024.</article>
         <article class="card paper"><strong>Visual object tracking using sparse representation and interest points in a double-step approach.</strong> 2020.</article>
         <article class="card paper"><strong>SAR image despeckling based on sparse representation and structural features.</strong> 2020.</article>
-        <article class="card paper"><strong>Visual tracking via decision-based particle filtering.</strong> SPIE, 2018.</article>
-        <article class="card paper"><strong>Visual target tracking using target memory templates and corner points.</strong> 2016.</article>
       </div>
     </div>
   </section>
@@ -846,16 +767,6 @@
     reveals.forEach(reveal => {
       revealOnScroll.observe(reveal);
     });
-    
-    // Automatically reveal elements that are already in viewport on load
-    setTimeout(() => {
-      reveals.forEach(reveal => {
-        const rect = reveal.getBoundingClientRect();
-        if(rect.top < window.innerHeight) {
-          reveal.classList.add('active');
-        }
-      });
-    }, 100);
   });
 </script>
 </body>
