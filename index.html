@@ -390,6 +390,31 @@
     .contact p { max-width:690px; margin:12px auto; color:var(--muted); }
     .contact .actions { justify-content:center; }
 
+    /* Certification floating badges */
+    .cert-section { position:relative; }
+    .cert-floats {
+      position:absolute;
+      top:-36px;
+      right:28px;
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+    .cert-floats img {
+      height:48px;
+      width:auto;
+      border-radius:8px;
+      background:rgba(255,255,255,0.02);
+      padding:4px;
+      box-shadow:0 10px 30px rgba(0,0,0,.22);
+      border:1px solid var(--line);
+      display:block;
+    }
+    @media (max-width:960px) {
+      .cert-floats { position:static; margin-top:12px; }
+      .cert-floats img { height:42px; }
+    }
+
     footer {
       text-align:center;
       padding:32px 0 50px;
@@ -560,10 +585,14 @@
         </article>
       </div>
     </div>
-  </section>
-
-  <section>
+  <section class="cert-section">
     <div class="container">
+  <section>
+      <div class="cert-floats" aria-hidden="false">
+        <img src="Assets/databricks.png" alt="Databricks logo" />
+        <img src="Assets/azure-badge.png" alt="Azure Data Scientist badge" />
+      </div>
+  <div class="two-col">
       <div class="section-head">
         <div>
           <p class="kicker">02 / Core stack</p>
