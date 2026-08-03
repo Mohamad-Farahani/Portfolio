@@ -1,32 +1,32 @@
 # Mohamad Farahani — Portfolio
 
-This repository contains my personal portfolio website.
+![Portfolio Preview](Assets/screenshot.png) 
+> *A quick glance at my professional portfolio.*
 
-## Live website
+This repository contains the source code for my personal portfolio website, highlighting my work as an AI/ML Developer, Data Scientist, and Biomedical Engineer.
 
-[Visit the portfolio](https://mohamad-farahani.github.io/Portfolio/)
+## Live Website
+[Visit the live portfolio here](https://mohamad-farahani.github.io/Portfolio/)
 
-## About me
+## About Me
+I design production-ready AI systems that combine research rigor, applied machine learning, and clean product thinking. My core areas of expertise include:
+* Generative AI, RAG, and agentic systems
+* Machine learning and deep learning
+* Biomedical signal processing and computer vision
+* Data engineering, cloud platforms, and MLOps
+* CUDA and GPU-accelerated computing
 
-I am an AI/ML Developer, Data Scientist, and Biomedical Engineer with experience in:
+## Featured Work
+* **AI Interview Coach:** End-to-end coaching system utilizing local Qwen models and OpenAI.
+* **AI Research Assistant:** RAG application built with LangChain for unstructured document synthesis.
+* **Voice Agentic AI Assistant:** Complete speech recognition tool with conversational state and calendar integration.
+* **Finance AI Assistant:** Hybrid-retrieval assistant for navigating and citing large financial reports.
+* **Real-Time Weather Data Pipeline:** Cloud ETL feeding analytics workflows using a Medallion architecture.
+* **Contactless Health Monitoring:** Smartphone-video pipeline for non-invasive cardiopulmonary analysis.
 
-- Generative AI, RAG, and agentic systems
-- Machine learning and deep learning
-- Biomedical signal processing and computer vision
-- Data engineering, cloud platforms, and MLOps
-- CUDA and GPU-accelerated computing
+## Local Setup
+To run this portfolio locally on your machine, you don't need any complex build tools or dependencies. Just clone and serve:
 
-## Featured work
-
-- AI Interview Coach
-- AI Research Assistant
-- Voice Agentic AI Assistant
-- Finance AI Assistant
-- Real-Time Weather Data Pipeline
-- Contactless Health Monitoring
-
-## Contact
-
-- [LinkedIn](https://www.linkedin.com/in/mohamad-farahani-686ba2211)
-- [GitHub](https://github.com/Mohamad-Farahani)
-- Email: farahanii.moh@gmail.com
+1. Clone the repository: 
+   ```bash
+   git clone [https://github.com/Mohamad-Farahani/Portfolio.git](https://github.com/Mohamad-Farahani/Portfolio.git)
