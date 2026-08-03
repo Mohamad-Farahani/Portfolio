@@ -642,15 +642,8 @@
           <div class="project-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
           </div>
-          <h3>🚀 Real-Time Streaming Data Pipeline</h3>
+          <h3>Real-Time Streaming Data Pipeline</h3>
           <p>This pipeline is designed to handle high-velocity streaming data, ensuring that raw weather information is cleaned, structured, and utilized for predictive analytics within minutes of capture.</p>
-          <ul class="project-ul">
-            <li><strong>Real-Time Ingestion:</strong> Leverages Spark Structured Streaming to pull live JSON payloads from Azure Event Hubs.</li>
-            <li><strong>Medallion Architecture:</strong> Data is organized into Bronze (Raw), Silver (Cleaned), and Gold (Aggregated) Delta tables for high reliability and performance.</li>
-            <li><strong>Automated ML Training:</strong> A Linear Regression model is retrained hourly using Spark MLlib to adapt to shifting weather patterns.</li>
-            <li><strong>Production-Grade Security:</strong> Credentials and connection strings are managed via Databricks Secret Scopes and Azure Key Vault.</li>
-            <li><strong>Automated Orchestration:</strong> The entire lifecycle is managed by a Databricks Workflow (DAG) that triggers ingestion, transformation, and prediction tasks.</li>
-          </ul>
           <div class="chips"><span class="chip">Databricks</span><span class="chip">Spark Structured Streaming</span><span class="chip">Azure Event Hubs</span><span class="chip">Azure Key Vault</span></div>
         </article>
 
