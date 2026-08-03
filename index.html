@@ -392,6 +392,8 @@
     }
     .project:hover .project-icon { transform: rotate(10deg) scale(1.1); background: var(--cyan); color: #000; }
     .joke { font-style: italic; font-size: .92rem; margin-top: auto; padding-top: 16px; }
+    .project-ul { padding-left: 18px; margin: 12px 0 20px; font-size: 0.95rem; color: var(--muted); line-height: 1.6; }
+    .project-ul strong { color: var(--text); }
 
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
     .info ul { padding-left: 20px; line-height: 1.8; }
@@ -635,13 +637,21 @@
       </div>
       <div class="projects">
         
-        <article class="card project">
+        <!-- Updated Project Card (Spans across both columns due to extra text length) -->
+        <article class="card project" style="grid-column: 1 / -1;">
           <div class="project-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
           </div>
-          <h3>AI Interview Coach</h3>
-          <p>End-to-end coaching system utilizing local Qwen models and OpenAI.</p>
-          <div class="chips"><span class="chip">Qwen</span><span class="chip">OpenAI</span><span class="chip">LangChain</span></div>
+          <h3>🚀 Real-Time Streaming Data Pipeline</h3>
+          <p>This pipeline is designed to handle high-velocity streaming data, ensuring that raw weather information is cleaned, structured, and utilized for predictive analytics within minutes of capture.</p>
+          <ul class="project-ul">
+            <li><strong>Real-Time Ingestion:</strong> Leverages Spark Structured Streaming to pull live JSON payloads from Azure Event Hubs.</li>
+            <li><strong>Medallion Architecture:</strong> Data is organized into Bronze (Raw), Silver (Cleaned), and Gold (Aggregated) Delta tables for high reliability and performance.</li>
+            <li><strong>Automated ML Training:</strong> A Linear Regression model is retrained hourly using Spark MLlib to adapt to shifting weather patterns.</li>
+            <li><strong>Production-Grade Security:</strong> Credentials and connection strings are managed via Databricks Secret Scopes and Azure Key Vault.</li>
+            <li><strong>Automated Orchestration:</strong> The entire lifecycle is managed by a Databricks Workflow (DAG) that triggers ingestion, transformation, and prediction tasks.</li>
+          </ul>
+          <div class="chips"><span class="chip">Databricks</span><span class="chip">Spark Structured Streaming</span><span class="chip">Azure Event Hubs</span><span class="chip">Azure Key Vault</span></div>
         </article>
 
         <article class="card project">
