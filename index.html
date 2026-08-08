@@ -98,6 +98,11 @@
       100% { transform: translateY(0px); }
     }
 
+    @keyframes cardDrift {
+      0%, 100% { translate: 0 0; }
+      50% { translate: 0 -7px; }
+    }
+
     @keyframes pulseGlow {
       0%, 100% { box-shadow: 0 10px 24px rgba(37, 99, 235, 0.18); }
       50% { box-shadow: 0 14px 36px rgba(8, 145, 178, 0.32); }
@@ -254,6 +259,10 @@
       box-shadow: var(--shadow);
       transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
     }
+
+    .card, .stat { animation: cardDrift 8s ease-in-out infinite; }
+    .card:nth-child(2n), .stat:nth-child(2n) { animation-delay: -4s; }
+    .card:nth-child(3n), .stat:nth-child(3n) { animation-delay: -2s; }
 
     .terminal {
       position: relative;
