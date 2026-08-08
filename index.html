@@ -397,8 +397,9 @@
     .info ul { padding-left: 20px; line-height: 1.8; }
     
     .publications { display: grid; gap: 16px; counter-reset: paper; }
-    .paper { position: relative; padding: 24px 24px 24px 64px; }
+    .paper { position: relative; display: block; padding: 24px 24px 24px 64px; text-decoration: none; }
     .paper:hover { transform: translateX(10px); border-color: var(--violet); background: var(--panel-strong); }
+    .paper:focus-visible { outline: 2px solid var(--violet); outline-offset: 4px; }
     .paper::before {
       counter-increment: paper;
       content: counter(paper, decimal-leading-zero);
@@ -408,6 +409,8 @@
       font: 800 .85rem Consolas, monospace;
     }
     .paper strong { color: var(--text); display: block; margin-bottom: 4px; }
+    .paper-meta { display: block; }
+    .paper-doi { color: var(--violet); font: 700 .82rem Consolas, monospace; }
 
     .contact {
       text-align: center;
@@ -489,7 +492,7 @@
     <div class="stat"><strong>5+ yrs</strong><span>Applied AI & ML | Data Science</span></div>
     <div class="stat"><strong>35%</strong><span>Faster GPU compute</span></div>
     <div class="stat"><strong>20%</strong><span>Performance gains</span></div>
-    <div class="stat"><strong>6</strong><span>Publications</span></div>
+    <div class="stat"><strong>4</strong><span>Publications</span></div>
   </div>
 
   <section id="about">
@@ -717,10 +720,22 @@
         </div>
       </div>
       <div class="publications">
-        <article class="card paper"><strong>Non-contact imaging of the neck for monitoring cardiopulmonary clinic patients.</strong> Biomedical Optics Express, 2025.</article>
-        <article class="card paper"><strong>Non-contact heart rate and respiratory rate estimation from videos of the neck.</strong> IEEE EMBC, 2024.</article>
-        <article class="card paper"><strong>Visual object tracking using sparse representation and interest points in a double-step approach.</strong> 2020.</article>
-        <article class="card paper"><strong>SAR image despeckling based on sparse representation and structural features.</strong> 2020.</article>
+        <a class="card paper" href="https://doi.org/10.1364/BOE.543645" target="_blank" rel="noreferrer">
+          <strong>Non-contact imaging of the neck for monitoring cardiopulmonary clinic patients.</strong>
+          <span class="paper-meta">Biomedical Optics Express, 2025 · <span class="paper-doi">DOI: 10.1364/BOE.543645 ↗</span></span>
+        </a>
+        <a class="card paper" href="https://doi.org/10.1109/EMBC53108.2024.10781989" target="_blank" rel="noreferrer">
+          <strong>Non-contact heart rate and respiratory rate estimation from videos of the neck.</strong>
+          <span class="paper-meta">IEEE EMBC, 2024 · <span class="paper-doi">DOI: 10.1109/EMBC53108.2024.10781989 ↗</span></span>
+        </a>
+        <a class="card paper" href="https://doi.org/10.5120/ijca2020920563" target="_blank" rel="noreferrer">
+          <strong>Visual object tracking using sparse representation and interest points in a double-step approach.</strong>
+          <span class="paper-meta">International Journal of Computer Applications, 2020 · <span class="paper-doi">DOI: 10.5120/ijca2020920563 ↗</span></span>
+        </a>
+        <a class="card paper" href="https://www.spiedigitallibrary.org/journals/journal-of-electronic-imaging/volume-27/issue-04/043027/Visual-tracking-via-decision-based-particle-filtering-based-on-sparse/10.1117/1.JEI.27.4.043027.full" target="_blank" rel="noreferrer">
+          <strong>Visual tracking via decision-based particle filtering based on sparse representation.</strong>
+          <span class="paper-meta">Journal of Electronic Imaging, 2018 · <span class="paper-doi">DOI: 10.1117/1.JEI.27.4.043027 ↗</span></span>
+        </a>
       </div>
     </div>
   </section>
